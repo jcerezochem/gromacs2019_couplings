@@ -108,6 +108,7 @@ const t_interaction_function interaction_function[F_NRE] =
     def_bonded  ("IDIHS",    "Improper Dih.",   4, 2, 2),
     def_bonded  ("PIDIHS",   "Improper Dih.",   4, 3, 3),
     def_bondedt ("TABDIHS", "Tab. Dih.",        4, 2, 2),
+    def_bonded  ("CROSS_BOND_DIHED", "BD-Cross",6, 4, 0),
     def_bonded  ("CMAP",  "CMAP Dih.",          5, -1, -1),
     def_nofc    ("GB12",     "GB 1-2 Pol. (unused)" ),
     def_nofc    ("GB13",     "GB 1-3 Pol. (unused)" ),

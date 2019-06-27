@@ -81,6 +81,9 @@ typedef union t_iparams
         real r1e, r2e, r3e, krt;
     } cross_ba;
     struct {
+        real rA,phiA,k; int mult;
+    } cross_bd;
+    struct {
         real thetaA, kthetaA, r13A, kUBA, thetaB, kthetaB, r13B, kUBB;
     } u_b;
     struct {

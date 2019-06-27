@@ -115,6 +115,7 @@ static std::array<BondedInteractions, F_NRE> s_bondedInteractionFunctions
     BondedInteractions {idihs, eNR_IMPROPER },                    // F_IDIHS
     BondedInteractions {pdihs, eNR_IMPROPER },                    // F_PIDIHS
     BondedInteractions {tab_dihs, eNR_TABDIHS },                  // F_TABDIHS
+    BondedInteractions {cross_bond_dihed, eNR_CROSS_BOND_DIHED }, // F_CROSS_BOND_DIHED
     BondedInteractions {unimplemented, eNR_CMAP },                // F_CMAP
     BondedInteractions {unimplemented, -1 },                      // F_GB12_NOLONGERUSED
     BondedInteractions {unimplemented, -1 },                      // F_GB13_NOLONGERUSED

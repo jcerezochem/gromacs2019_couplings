@@ -216,6 +216,13 @@ real rbdihs(int nfa, const t_iatom forceatoms[], const t_iparams ip[],
             const t_mdatoms *md, t_fcdata *fcd,
             int *global_atom_index);
 
+real cross_bond_dihed(int nfa, const t_iatom forceatoms[], const t_iparams ip[],
+                      const rvec x[], rvec4 f[], rvec fshift[],
+                      const t_pbc *pbc, const t_graph *g,
+                      real lambda, real *dvdlambda,
+                      const t_mdatoms *md, t_fcdata *fcd,
+                      int *global_atom_index);
+
 real restrdihs(int nfa, const t_iatom forceatoms[], const t_iparams ip[],
                const rvec x[], rvec4 f[], rvec fshift[],
                const t_pbc *pbc, const t_graph *g,

@@ -146,6 +146,7 @@ typedef enum {
     d_pairs_nb,
     d_angles,
     d_dihedrals,
+    d_bond_dihedral,
     d_constraints,
     d_settles,
     d_polarization,

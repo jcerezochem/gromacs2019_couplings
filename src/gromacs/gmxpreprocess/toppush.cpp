@@ -1741,7 +1741,9 @@ void push_bond(directive d, t_params bondtype[], t_params bond[],
         "%d%d%d%d",
         "%d%d%d%d%d",
         "%d%d%d%d%d%d",
-        "%d%d%d%d%d%d%d"
+        "%d%d%d%d%d%d%d",
+        "%d%d%d%d%d%d%d%d",
+        "%d%d%d%d%d%d%d%d%d"
     };
     const char  *asformat[MAXATOMLIST] = {
         "%*s%*s",
@@ -1749,7 +1751,9 @@ void push_bond(directive d, t_params bondtype[], t_params bond[],
         "%*s%*s%*s%*s",
         "%*s%*s%*s%*s%*s",
         "%*s%*s%*s%*s%*s%*s",
-        "%*s%*s%*s%*s%*s%*s%*s"
+        "%*s%*s%*s%*s%*s%*s%*s",
+        "%*s%*s%*s%*s%*s%*s%*s%*s",
+        "%*s%*s%*s%*s%*s%*s%*s%*s%*s"
     };
     const char  *ccformat = "%lf%lf%lf%lf%lf%lf%lf%lf%lf%lf%lf%lf%lf";
     int          nr, i, j, nral, nral_fmt, nread, ftype;
@@ -1784,7 +1788,7 @@ void push_bond(directive d, t_params bondtype[], t_params bond[],
     }
 
     nread = sscanf(line, aaformat[nral_fmt-1],
-                   &aa[0], &aa[1], &aa[2], &aa[3], &aa[4], &aa[5]);
+                   &aa[0], &aa[1], &aa[2], &aa[3], &aa[4], &aa[5], &aa[6], &aa[7], &aa[8], &aa[9]);
 
     if (ftype == F_SETTLE)
     {
@@ -1843,7 +1847,7 @@ void push_bond(directive d, t_params bondtype[], t_params bond[],
             if (aa[i] == aa[j])
             {
                 auto message = gmx::formatString("Duplicate atom index (%d) in %s", aa[i], dir2str(d));
-                if (ftype == F_ANGRES)
+                if (ftype == F_ANGRES || ftype == F_CROSS_BOND_DIHED)
                 {
                     /* Since the angle restraints uses 2 pairs of atoms to
                      * defines an angle between vectors, it can be useful

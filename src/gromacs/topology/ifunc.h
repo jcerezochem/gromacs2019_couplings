@@ -147,6 +147,7 @@ enum
     F_IDIHS,
     F_PIDIHS,
     F_TABDIHS,
+    F_CROSS_BOND_DIHED,
     F_CMAP,
     F_GB12_NOLONGERUSED,
     F_GB13_NOLONGERUSED,
@@ -226,7 +227,7 @@ static inline bool IS_RESTRAINT_TYPE(int ifunc)
 /* Maximum allowed number of atoms, parameters and terms in interaction_function.
  * Check kernel/toppush.c when you change these numbers.
  */
-constexpr int MAXATOMLIST   = 6;
+constexpr int MAXATOMLIST   = 8;
 constexpr int MAXFORCEPARAM = 12;
 constexpr int NR_RBDIHS     = 6;
 constexpr int NR_CBTDIHS    = 6;
